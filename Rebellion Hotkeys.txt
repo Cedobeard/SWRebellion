@@ -18,7 +18,8 @@ ChangeResolution(1920, 1080)
 ;Press CTRL+SHIFT+1 to make this work. See ChangeResolution function below.
 Return
 
-^xbutton1::  ;Extra Mouse Button 1 will cause the selected personnel to perform their default mission at the pointer.
+^xbutton1::  ;CTRL + <Extra Mouse Button 1> will cause the selected personnel to perform their non-default mission at the pointer.
+             ;Typically this is espionage, but check first. It's a little slower cause it navigates the dropdown for you.
 send !m
 sleep 30
 send {ctrl up}
@@ -45,7 +46,6 @@ return
 
 ;          remapping
 xbutton2::esc    ;Extra Mouse Button 2 will press escape.
-+xbutton2::!w    ;Extra Mouse Button 2 (while Shift is held down) will close all windows (alt+w).
 wheelup::!=      ;Mouse Wheel Up will cause game speed to increase.
 wheeldown::!-    ;Mouse Wheel Down will cause game speed to decrease.
 return
@@ -67,4 +67,4 @@ ChangeResolution(Screen_Width := 1920, Screen_Height := 1080, Color_Depth := 32)
 
 Return
 
-;Built by CedoBeard for free use, for all.
+;Built by CedoBeard for free use, for all. 
